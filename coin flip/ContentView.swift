@@ -19,12 +19,12 @@ struct ContentView: View {
                     CustomText1(text: "Coin Flip")
                         .foregroundColor(.black)
                         .font(.largeTitle).bold()
-                        .position(x:380,y:10)
+                        .position(x:525,y:390)
                 
                 VStack{
                     Spacer()
                     NavigationLink(destination: SecondView()) {
-                        CustomTextbutton(text: "Go to Coin Flip")
+                        CustomTextbutton(text: "Enter Casino")
                             .padding()
                             .background(Color.blue)
                             .foregroundColor(.white)
@@ -46,8 +46,8 @@ struct CustomText: View {
 struct CustomText1: View {
     let text: String
     var body: some View {
-        Text(text).font(Font.custom("Marker Felt", size: 36))
-            .foregroundColor(.indigo)
+        Text(text).font(Font.custom("Marker Felt", size: 66))
+            .foregroundColor(.red)
     }
 }
 struct CustomTextbutton: View {

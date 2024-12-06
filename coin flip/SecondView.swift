@@ -16,10 +16,10 @@ struct SecondView: View {
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 
-                CustomText(text: "Coin Flip")
+                CustomText1(text: "Coin Flip")
                     .foregroundColor(.black)
                     .font(.largeTitle).bold()
-                    .position(x:380,y:10)
+                    .position(x:390,y:180)
                 
                 VStack{
                     Spacer()
