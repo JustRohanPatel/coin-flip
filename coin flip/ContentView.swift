@@ -11,21 +11,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("p")
-                    .resizable()
+                Image("p") //background image
+                    .resizable() //modifiers
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 
-                    CustomText1(text: "Coin Flip")
-                        .foregroundColor(.black)
+                    CustomText1(text: "Coin Flip") //title
+                        .foregroundColor(.black)//modiifiers
                         .font(.largeTitle).bold()
                         .position(x:525,y:390)
                 
                 VStack{
                     Spacer()
-                    NavigationLink(destination: SecondView()) {
-                        CustomTextbutton(text: "Enter Casino")
-                            .padding()
+                    NavigationLink(destination: SecondView()) { //what teleports you to secomd view
+                        CustomTextbutton(text: "Enter Casino")// what makes up the button
+                            .padding() //modifier
                             .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(14)
@@ -36,21 +36,21 @@ struct ContentView: View {
         }
     }
 }
-struct CustomText: View {
+struct CustomText: View { //makes the custom text for the title and text on coin view
     let text: String
     var body: some View {
         Text(text).font(Font.custom("Marker Felt", size: 36))
             .foregroundColor(.black)
     }
 }
-struct CustomText1: View {
+struct CustomText1: View {//makes the other custom text 
     let text: String
     var body: some View {
         Text(text).font(Font.custom("Marker Felt", size: 66))
             .foregroundColor(.red)
     }
 }
-struct CustomTextbutton: View {
+struct CustomTextbutton: View {//makes the custom text for the buttons
     let text: String
     var body: some View {
         Text(text).font(Font.custom("Marker Felt", size: 36))

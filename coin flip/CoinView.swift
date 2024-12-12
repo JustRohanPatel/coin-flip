@@ -14,30 +14,30 @@ struct CoinView: View {
     @State private var rotationAngle: Double = 0
     
     var body: some View {
-        NavigationView {
+        NavigationView { // make it able to see this view
             VStack {
-                CustomText(text: "Coin Flip")
-                    .font(.largeTitle)
+                CustomText(text: "Coin Flip") // add texts
+                    .font(.largeTitle) //changes text properties
                     .fontWeight(.bold)
                     .padding()
-                Image(imageName)
+                Image(imageName)// add coin
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFit()//properties
                     .frame(width: 200, height: 200)
                     .padding()
-                    .rotation3DEffect(
+                    .rotation3DEffect(//animation
                         Angle(degrees: rotationAngle),
                         axis: (x: 0, y: 1, z: 0))
-                    .animation(.easeInOut(duration: 1.2), value: rotationAngle)
+                    .animation(.easeInOut(duration: 1.2), value: rotationAngle)//pin to point
                 
-                CustomText(text: result)
+                CustomText(text: result) // show who wins
                     .font(.title)
                     .padding()
                 HStack {
-                    Button(action: flipCoin) {
+                    Button(action: flipCoin) { //flip coins
                         CustomText(text: "Flip Coin")
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.blue)//modifiers
                             .foregroundColor(.white)
                             .cornerRadius(14)
                             .frame(width: 300, height: 100)
@@ -47,15 +47,15 @@ struct CoinView: View {
             }
         }
     }
-    func flipCoin() {
+    func flipCoin() { //what actullly make the coin works
         withAnimation {
               rotationAngle += 1080 // Two full rotations
            }
-        if Bool.random() {
+        if Bool.random() { //if head then makes it say head and show heads
             result = "Head"
             imageName = "head"
         } else {
-            result = "Tails"
+            result = "Tails" //if tails then makes it say tails and show tails
             imageName = "tails"
         }
     }

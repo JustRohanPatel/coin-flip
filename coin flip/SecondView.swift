@@ -11,22 +11,22 @@ struct SecondView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("table")
+                Image("table") //show backgrounds
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fill) //modifiers
                     .edgesIgnoringSafeArea(.all)
                 
-                CustomText1(text: "Coin Flip")
-                    .foregroundColor(.black)
+                CustomText1(text: "Coin Flip") //makes background
+                    .foregroundColor(.black) //modifiers
                     .font(.largeTitle).bold()
                     .position(x:390,y:180)
                 
                 VStack{
                     Spacer()
-                    NavigationLink(destination: CoinView()) {
-                        CustomTextbutton(text: "Go to Coin Flip")
+                    NavigationLink(destination: CoinView()) {//what teleports you to CoinView
+                        CustomTextbutton(text: "Go to Coin Flip") // the button that teleport you to next view
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.blue) // modifier
                             .foregroundColor(.white)
                             .cornerRadius(14)
                             .frame(width: 300, height: 100)
