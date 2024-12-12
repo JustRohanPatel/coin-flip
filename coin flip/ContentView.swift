@@ -17,13 +17,13 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                     CustomText1(text: "Coin Flip") //title
-                        .foregroundColor(.black)//modiifiers
+                        .foregroundColor(.black)//modifiers
                         .font(.largeTitle).bold()
                         .position(x:525,y:390)
                 
                 VStack{
                     Spacer()
-                    NavigationLink(destination: SecondView()) { //what teleports you to secomd view
+                    NavigationLink(destination: SecondView()) { //what teleports you to second view
                         CustomTextbutton(text: "Enter Casino")// what makes up the button
                             .padding() //modifier
                             .background(Color.blue)
