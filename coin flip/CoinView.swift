@@ -29,7 +29,6 @@ struct CoinView: View {
                         Angle(degrees: rotationAngle),
                         axis: (x: 0, y: 1, z: 0))
                     .animation(.easeInOut(duration: 1.2), value: rotationAngle)//pin to point
-                
                 CustomText(text: result) // show who wins
                     .font(.title)
                     .padding()

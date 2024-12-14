@@ -15,12 +15,10 @@ struct SecondView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill) //modifiers
                     .edgesIgnoringSafeArea(.all)
-                
                 CustomText1(text: "Coin Flip") //makes background
                     .foregroundColor(.black) //modifiers
                     .font(.largeTitle).bold()
                     .position(x:390,y:180)
-                
                 VStack{
                     Spacer()
                     NavigationLink(destination: CoinView()) {//what teleports you to CoinView
